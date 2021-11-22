@@ -1,0 +1,181 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.groups {
+    border: 1px solid red;
+}
+
+.groups__list {}
+
+.groups__list-item {
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.groups__link {
+    text-decoration: none;
+}
+
+.groups__list-text {
+    width: 96px;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    text-overflow: ellipsis; 
+    font-size: 14px;
+    margin-right: 24px;
+    display: inline-block;
+    /* max-width: 350px; */
+    /* max-height: 500px;
+    overflow: visible
+}
+
+.groups__list-namber {
+    color: rgb(4, 0, 255);
+    display: inline-block;
+} */ 
+
+
+.wrapper1 {
+    width: 100%;
+    background-color: rgb(240, 236, 236);
+    border: 1px solid red;
+}
+
+.inner1 {
+    border: 1px solid red;
+    margin: 20px 200px;
+    background-color: rgb(255, 255, 255);
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}  
+
+
+.left1 {
+    display: flex;
+    
+}
+.left1__lable {
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.right1 {
+    display: flex;
+    align-items:center;
+    flex: 0 1 60%;
+}
+/* .run {
+    display: flex;
+    align-items: center;
+} */
+
+.right1__name {
+    max-width: 200px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 60px;
+}
+.right1__progressBar {
+    max-width: 430px;
+    min-width: 50px;
+    width: 100%;
+    height: 30px;
+    background-color: pink;
+    border: 1px solid red;
+    margin: 0 20px;
+
+    display: flex;
+    align-items:center
+}
+span {
+    margin-left: 5px;
+}
+/* .info {
+    display: flex;                                                                
+} */
+.right1__release {
+    margin-right: 5px;
+}
+.right1__toDo {
+    word-break:break-all;
+}
+
+.right1__time {
+    margin: 0 20px; 
+}
+
+
+
+.wrapper2 {
+    border: 1px solid red;
+    width: 400px;
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+}
+.clip {
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    background: #fc0; /* Цвет фона */
+    padding: 5px; /* Поля вокруг текста */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    color: red;
+    font-size: 10px;
+    position: relative;
+}
+
+.hint {
+    min-width: 400px;
+    max-width: 1000px;  
+    border: 1px solid #BFC2C4;
+    background-color: #f1f3f2;
+    display: block;
+    opacity: 0;
+    word-wrap: break-word;
+    box-shadow: 1px 1px 1px 0 rgb(160 160 160 / 50%);
+    padding: 20px;
+    font-size: 13px;
+    position: absolute;
+    bottom: 5px;
+    right: 405px;
+
+
+} 
+.clip:hover + .hint {
+    /* display: block; */
+    opacity: 1;
+    transition: 1s;
+    
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 300px; /* Ширина подсказки */
+    left: 0; top: 0; /* Положение подсказки */
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+   } 
+   [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em; /* Положение подсказки */
+   }
